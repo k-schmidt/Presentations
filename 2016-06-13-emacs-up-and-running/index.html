@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Emacs: Up and Running</title>
+<meta name="author" content="(Kyle Schmidt)"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="file:///home//kyleschmidt/Dropbox/reveal.js-master/css/reveal.css"/>
+
+<link rel="stylesheet" href="file:///home//kyleschmidt/Dropbox/reveal.js-master/css/theme/moon.css" id="theme"/>
+
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'file:///home//kyleschmidt/Dropbox/reveal.js-master/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+<meta name="description" content="Emacs: Up and Running.">
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h1 class="title">Emacs: Up and Running</h1><h2 class="author">Kyle Schmidt</h2><p class="date">Created: 2016-06-11 Sat 15:55</p>
+</section>
+<section id="table-of-contents">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#/slide-orgheadline2">History</a></li>
+<li><a href="#/slide-orgheadline4">Setting Up and Installing Emacs</a></li>
+<li><a href="#/slide-orgheadline5">Using a Preconfigured Setup</a></li>
+<li><a href="#/slide-orgheadline6">Follow Me!</a></li>
+</ul>
+</div>
+</div>
+</section>
+
+<section>
+<section id="slide-orgheadline2">
+<h2 id="orgheadline2">History</h2>
+<ul>
+<li>Emacs development began in the 1970s at the MIT AI Lab where the researchers used an editor known as Tape Editor and Corrector (TECO) which had two modes:
+<ul>
+<li>input mode ('i')</li>
+<li>command mode (ESC)</li>
+
+</ul></li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orgheadline1">
+<h3 id="orgheadline1">The 1970's</h3>
+<ul>
+<li>Carl Mikkelsen, a researcher at the MIT AI Lab, added a mode called <i>Control-R</i> that allowed the display to be updated each time the user entered a keystroke.</li>
+<li>Richard Stallman, a Harvard graduate, researcher at MIT, and founder of the Free Software Foundation, reimplemented Mikkelsen's keybindings so that they ran efficiently and then added a macro feature to TECO that allowed users to redefine any keystroke to run a TECO program, hence the name Emacs.</li>
+
+</ul>
+</section>
+<section>
+<ul>
+<li>Stallman also coined the use of buffers, the idea that you make changes to a <i>copy</i> of the file that you wish to edit. When you save the buffer, the entire original copy of the file is overwritten. Almost all modern editors perform in this way.</li>
+<li>Soon, scientists at MIT started to create their own macros which made it very difficult because they all had to share the same machines. Guy Steele, another Harvard and MIT alum is responsible for unifying the overly diverse macros into a single set.</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orgheadline4">
+<h2 id="orgheadline4">Setting Up and Installing Emacs</h2>
+<p>
+If you already have Emacs installed via package manager then you will want to uninstall it.
+</p>
+
+<div class="org-src-container">
+
+<pre  class="src src-sh">sudo apt-get remove --purge emacs emacs23 emacs24
+sudo apt-get autoremove
+which emacs  # Should not return a path to the application
+</pre>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-orgheadline3">
+<h3 id="orgheadline3">Installing from Source</h3>
+<div class="org-src-container">
+
+<pre  class="src src-sh">wget ftp://ftp.gnu.org/pub/gnu/emacs/emacs-24.5.tar.xz
+tar xvfJ emacs-24.5.tar.xz
+cd emacs-24.5
+./configure
+make
+sudo make install
+which emacs # Should return a path to the application
+</pre>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-orgheadline5">
+<h2 id="orgheadline5">Using a Preconfigured Setup</h2>
+<div class="org-src-container">
+
+<pre  class="src src-sh">mv ~.emacs.d ~/.emacs.d.bak
+git clone https://github.com/bodil/ohai-emacs.git ~/.emacs.d
+</pre>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-orgheadline6">
+<h2 id="orgheadline6">Follow Me!</h2>
+<p>
+Courtesy to:
+</p>
+
+<p class="fragment roll-in">
+The powerful Org-mode,
+</p>
+<p class="fragment roll-in">
+the impressive Reveal.js
+</p>
+</section>
+</section>
+</div>
+</div>
+<p> Created by Kyle Schmidt. </p><p> Written with Org-Mode and Ox-Reveal. </p>
+<script src="file:///home//kyleschmidt/Dropbox/reveal.js-master/lib/js/head.min.js"></script>
+<script src="file:///home//kyleschmidt/Dropbox/reveal.js-master/js/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: false,
+history: false,
+center: true,
+slideNumber: 'c',
+rollingLinks: true,
+keyboard: true,
+overview: true,
+width: 1200,
+height: 800,
+margin: 0.10,
+minScale: 0.50,
+maxScale: 2.50,
+
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || 'cube', // default/cube/page/concave/zoom/linear/fade/none
+transitionSpeed: 'default',
+multiplex: {
+    secret: '', // null if client
+    id: '', // id, obtained from socket.io server
+    url: '' // Location of socket.io server
+},
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'file:///home//kyleschmidt/Dropbox/reveal.js-master/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'file:///home//kyleschmidt/Dropbox/reveal.js-master/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'file:///home//kyleschmidt/Dropbox/reveal.js-master/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+});
+</script>
+</body>
+</html>

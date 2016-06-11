@@ -1,0 +1,69 @@
+#+Title: Emacs: Up and Running
+#+Author: Kyle Schmidt
+#+Email: kyle.a.schmidt@gmail.com
+
+#+OPTIONS: reveal_center:t reveal_history:nil reveal_control:t reveal_progress:nil
+#+OPTIONS: reveal_rolling_links:t reveal_keyboard:t reveal_overview:t num:nil
+#+OPTIONS: reveal_width:1200 reveal_height:800
+#+OPTIONS: toc:1
+#+REVEAL_MARGIN: 0.1
+#+REVEAL_MIN_SCALE: 0.5
+#+REVEAL_MAX_SCALE: 2.5
+#+REVEAL_TRANS: cube
+#+REVEAL_THEME: moon
+#+REVEAL_HLEVEL: 2
+#+REVEAL_HEAD_PREAMBLE: <meta name="description" content="Emacs: Up and Running.">
+#+REVEAL_POSTAMBLE: <p> Created by Kyle Schmidt. </p><p> Written with Org-Mode and Ox-Reveal. </p>
+#+REVEAL_PLUGINS: (markdown notes)
+
+* History
+
+  - Emacs development began in the 1970s at the MIT AI Lab where the researchers used an editor known as Tape Editor and Corrector (TECO) which had two modes:
+    - input mode ('i')
+    - command mode (ESC)
+
+** The 1970's
+
+   - Carl Mikkelsen, a researcher at the MIT AI Lab, added a mode called /Control-R/ that allowed the display to be updated each time the user entered a keystroke.
+   - Richard Stallman, a Harvard graduate, researcher at MIT, and founder of the Free Software Foundation, reimplemented Mikkelsen's keybindings so that they ran efficiently and then added a macro feature to TECO that allowed users to redefine any keystroke to run a TECO program, hence the name Emacs.
+#+REVEAL: split
+   - Stallman also coined the use of buffers, the idea that you make changes to a /copy/ of the file that you wish to edit. When you save the buffer, the entire original copy of the file is overwritten. Almost all modern editors perform in this way.
+   - Soon, scientists at MIT started to create their own macros which made it very difficult because they all had to share the same machines. Guy Steele, another Harvard and MIT alum is responsible for unifying the overly diverse macros into a single set.
+
+* Setting Up and Installing Emacs
+
+  If you already have Emacs installed via package manager then you will want to uninstall it.
+
+  #+BEGIN_SRC sh
+    sudo apt-get remove --purge emacs emacs23 emacs24
+    sudo apt-get autoremove
+    which emacs  # Should not return a path to the application
+  #+END_SRC
+
+** Installing from Source
+
+   #+BEGIN_SRC sh
+     wget ftp://ftp.gnu.org/pub/gnu/emacs/emacs-24.5.tar.xz
+     tar xvfJ emacs-24.5.tar.xz
+     cd emacs-24.5
+     ./configure
+     make
+     sudo make install
+     which emacs # Should return a path to the application
+   #+END_SRC
+
+* Using a Preconfigured Setup
+
+  #+BEGIN_SRC sh
+    mv ~.emacs.d ~/.emacs.d.bak
+    git clone https://github.com/bodil/ohai-emacs.git ~/.emacs.d
+  #+END_SRC
+
+* Follow Me!
+
+  Courtesy to:
+
+#+ATTR_REVEAL: :frag roll-in
+  The powerful Org-mode,
+#+ATTR_REVEAL: :frag roll-in
+  the impressive Reveal.js
