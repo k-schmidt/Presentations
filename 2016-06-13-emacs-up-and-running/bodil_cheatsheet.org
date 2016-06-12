@@ -7,8 +7,8 @@ Written using Emacs Org-mode
 
 | Keybinding | Name             | Explanation                                                                    |
 |------------+------------------+--------------------------------------------------------------------------------|
-| "C-\"      | company-try-hard | Word completions at point                                                      |
-| "C-\\"     | company-try-hard | Dropdown of word completions at point                                          |
+| "C-\\"     | company-try-hard | Word completions at point                                                      |
+| "C-\\\"    | company-try-hard | Dropdown of word completions at point                                          |
 | "M-/"      | hippie-expand    | Cycles through possible expression completions, can be pressed multiple times. |
 
 ** Navigation
