@@ -1,5 +1,6 @@
 * Cheatsheet for @bodil ohai-emacs
 By: Kyle Schmidt
+
 Written using Emacs Org-mode
 
 ** Completions
