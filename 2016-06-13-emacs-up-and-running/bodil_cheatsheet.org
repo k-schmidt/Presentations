@@ -38,7 +38,7 @@ Written using Emacs Org-mode
 
 | Keybinding | Name                   | Explanation                                    |
 |------------+------------------------+------------------------------------------------|
-| C-x g      | magit-status           | Get the status a git repository                |
+| C-x g      | magit-status           | Get the status of a git repository             |
 | <TAB>      | magit-selection-toggle | View diffs of file at point                    |
 | s           | magit-stage-file       | Stage/add the file at point                    |
 | S           | magit-stage-modified   | Stage/add all modified files                   |
