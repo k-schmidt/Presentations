@@ -29,10 +29,6 @@ Written using Emacs Org-mode
 | M-p        | previous-error | Jump to previous error |
 
 
-\\
-\\
-\\
-
 
 ** Git
 
