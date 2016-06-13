@@ -1,0 +1,97 @@
+% Created 2016-06-13 Mon 07:27
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\author{Kyle Schmidt}
+\date{\today}
+\title{}
+\hypersetup{
+ pdfauthor={Kyle Schmidt},
+ pdftitle={},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 24.5.1 (Org mode 8.3.4)}, 
+ pdflang={English}}
+\begin{document}
+
+\tableofcontents
+
+\section{Cheatsheet for @bodil ohai-emacs}
+\label{sec:orgheadline5}
+By: Kyle Schmidt
+
+Written using Emacs Org-mode
+
+\subsection{Completions}
+\label{sec:orgheadline1}
+
+\begin{center}
+\begin{tabular}{lll}
+Keybinding & Name & Explanation\\
+\hline
+C-$\backslash$\ & company-try-hard & Word completions at point\\
+C-$\backslash$\ $\backslash$\ & company-try-hard & Dropdown of word completions at point\\
+M-/ & hippie-expand & Cycles through possible expression completions.\\
+\end{tabular}
+\end{center}
+
+\subsection{Navigation}
+\label{sec:orgheadline2}
+
+\begin{center}
+\begin{tabular}{lll}
+Keybinding & Name & Explanation\\
+\hline
+C-x o & ohai/previous-window & Navigate to previous window\\
+C-x C-o & ohai/select-window & Pop-up selection of characters to choose window\\
+C-x M-o & ace-swap-window & Pop-up selection of characters to choose window\\
+C-; & avy-goto-word & Jump to word in buffer\\
+C-t & helm-imenu & Jump to indexes particular to the current mode\\
+\end{tabular}
+\end{center}
+
+\subsection{Check Errors}
+\label{sec:orgheadline3}
+
+\begin{center}
+\begin{tabular}{lll}
+Keybinding & Name & Explanation\\
+\hline
+M-n & next-error & Jump to next error\\
+M-p & previous-error & Jump to previous error\\
+\end{tabular}
+\end{center}
+
+
+\newpage
+
+\subsection{Git}
+\label{sec:orgheadline4}
+
+\begin{center}
+\begin{tabular}{lll}
+Keybinding & Name & Explanation\\
+\hline
+C-x g & magit-status & Get the status of the \textbf{current} git repository\\
+<TAB> & magit-selection-toggle & View diffs of file at point\\
+s & magit-stage-file & Stage/add the file at point\\
+S & magit-stage-modified & Stage/add all modified files\\
+c & magit-commit-popup & Popup buffer to write git commit message\\
+C-c C-c & magit-dispatch-popup & Commit the changes\\
+P & magit-push-popup & Push changes\\
+F & magit-pull-popup & Fetch changes from remote branch\\
+\end{tabular}
+\end{center}
+\end{document}
