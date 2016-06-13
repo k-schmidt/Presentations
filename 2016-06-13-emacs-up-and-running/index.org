@@ -30,6 +30,14 @@
    - Stallman also coined the use of buffers, the idea that you make changes to a /copy/ of the file that you wish to edit. When you save the buffer, the entire original copy of the file is overwritten. Almost all modern editors perform in this way.
    - Soon, scientists at MIT started to create their own macros which made it very difficult because they all had to share the same machines. Guy Steele, another Harvard and MIT alum is responsible for unifying the overly diverse macros into a single set.
 
+* Why Emacs?
+
+  - The Emacs environment is an extension of your thoughts.
+    - Keybindings, modes, and windows work for you.
+  - Limited application switching.
+  - Works everywhere!
+    - Remote server in the terminal, Linux, Mac, and even Windows!
+
 * Setting Up and Installing Emacs
 
   If you already have Emacs installed via package manager then you will want to uninstall it.
